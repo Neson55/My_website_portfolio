@@ -1,17 +1,12 @@
 import Navbar from "./components/Navbar"
 import Footer from "./components/Footer"
+import Main_screen from "./components/Main_screen"
 
 function App() {
 
-  return (<div> 
+  return (<div className="h-screen flex-col ">
     <Navbar />
-    <div className="h-300 flex justify-center items-center bg-gray-100 ">
-      <div className=" text-center mx-auto" >
-        <h1>
-          Hello
-        </h1>
-      </div>
-    </div>
+    <Main_screen />
     <Footer />
   </div>
   )

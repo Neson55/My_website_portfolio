@@ -3,7 +3,7 @@ import { FaTelegramPlane } from "react-icons/fa"
 
 function Footer () {
          return(
-            <div className="flex all-center justify-center mx-auto ">
+            <div className=" h-1/10 flex justify-center ">
                 
                   <div className=' shadow-gray-400 p-3 cursor-pointer'>
                                             <a href='#' target='_blank' rel='noopener noreferrer'>

@@ -1,14 +1,9 @@
-import Navbar from "./components/Navbar"
-import Footer from "./components/Footer"
-import Main_screen from "./components/Main_screen"
+import { Routing } from './Routing.jsx'
 
 function App() {
 
-  return (<div className="h-screen flex-col ">
-    <Navbar />
-    <Main_screen />
-    <Footer />
-  </div>
+  return (
+    <Routing />
   )
 }
 

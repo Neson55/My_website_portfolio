@@ -11,7 +11,9 @@ function Main_screen() {
                         typewriter.typeString('Neson')
                             .pauseFor(1000)
                             .typeString('<br/>')                            
-                            .typeString("I'm Professional Web Developer")                            
+                            .typeString("I'm Professional Web Developer")
+                            .pauseFor(1000)
+                            .changeDeleteSpeed(20)                           
                             .deleteChars(26)
                             .pauseFor(1000)
                             .typeString("Junior Web Developer")
@@ -40,12 +42,12 @@ function Main_screen() {
                     }}
                 >
                     <a
-                        className='px-12 py-3 text-sm font-medium rounded shadow bg-gray-50 active:bg-gray-900 active:text-slate-50 focus:outline-none focus:ring'
+                        className='px-12 py-3 text-sm font-medium rounded shadow bg-gray-50 active:bg-gray-500 active:text-slate-50 focus:outline-none focus:ring cursor-pointer hover:bg-gray-100'
                     >
                         Contact Me
                     </a>
                     <a
-                        className='px-12 py-3 text-sm font-medium rounded shadow bg-gray-50 active:bg-gray-900 active:text-slate-50 focus:outline-none focus:ring'
+                        className='px-12 py-3 text-sm font-medium rounded shadow bg-gray-50 active:bg-gray-500 active:text-slate-50 focus:outline-none focus:ring cursor-pointer hover:bg-gray-100'
                     >
                         My resume
                     </a>
@@ -53,6 +55,7 @@ function Main_screen() {
 
             </div>
         </div>
+       
     );
 }
 

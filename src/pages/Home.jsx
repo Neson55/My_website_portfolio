@@ -5,9 +5,9 @@ import Main_screen from "../components/Main_screen"
 export const Home = ()=> {
 
         return(
-            <div className="h-screen flex-col ">
-            <Navbar />
-            <Main_screen/>
+            <div className="h-screen flex-col">
+            <Navbar/>
+            <Main_screen variant='home'/>
             <Footer />
           </div>
         );

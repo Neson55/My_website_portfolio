@@ -2,7 +2,7 @@
 export default {
   content: ["./index.html",
   "./src/**/*.{js,ts,jsx,tsx}",
-  "./src/components/**/*.{js,ts,jsx,tsx}",],
+  ],
   theme: {
     extend: {
       height: {
@@ -12,6 +12,6 @@ export default {
     },
   },
   plugins: [    
-    // require('./node_modules/tailwind-percentage-heights-plugin')()
+    require('./node_modules/tailwind-percentage-heights-plugin')()
   ],
 }

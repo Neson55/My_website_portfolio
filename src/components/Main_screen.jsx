@@ -1,7 +1,13 @@
 import Typewriter from 'typewriter-effect';
 import { motion } from 'framer-motion';
 
-function Main_screen() {
+function Main_screen({variant}) {
+
+    // className={`${screenVariant[variant]}`}
+    // const screenVariant = {
+    //     home :"h-4/5 flex justify-center items-center ",
+    //     about:"h-4/5 flex justify-center items-center bg-red-100 "
+    // }
 
     return (
         <div className="h-4/5 flex justify-center items-center ">

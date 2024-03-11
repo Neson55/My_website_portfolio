@@ -1,67 +1,77 @@
 import Typewriter from 'typewriter-effect';
 import { motion } from 'framer-motion';
+import React, { useEffect, useState } from 'react';
 
-function Main_screen({variant}) {
+function Main_screen({ variant }) {
 
-    // className={`${screenVariant[variant]}`}
-    // const screenVariant = {
-    //     home :"h-4/5 flex justify-center items-center ",
-    //     about:"h-4/5 flex justify-center items-center bg-red-100 "
-    // }
+    const [asyncResult, setAsyncResult] = useState(null);
+    const [isTyping, setIsTyping]= useState (true)
 
+    const asyncFunction = async () => {
+        await new Promise(resolve => setTimeout(resolve));  // Adjust the timeout as needed
+        return (
+            <motion.div className="flex justify-between mx-auto mt-10"
+                initial="hidden"
+                animate="visible"
+                variants={{
+                    hidden: {
+                        scale: 0.8,
+                        opacity: 0,
+                    },
+                    visible: {
+                        scale: 1,
+                        opacity: 1,
+                    },
+                }}
+            >
+                <a
+                    className='px-12 py-3 text-sm font-medium rounded shadow bg-gray-50 active:bg-gray-500 active:text-slate-50 focus:outline-none focus:ring cursor-pointer hover:bg-gray-100'
+                >
+                    Contact Me
+                </a>
+                <a
+                    className='px-12 py-3 text-sm font-medium rounded shadow bg-gray-50 active:bg-gray-500 active:text-slate-50 focus:outline-none focus:ring cursor-pointer hover:bg-gray-100'
+                >
+                    My resume
+                </a>
+            </motion.div>
+        );
+    };
+    useEffect(() => {
+        asyncFunction().then(result => {
+            setAsyncResult(result);
+            
+        });
+    }, []);
     return (
         <div className="h-4/5 flex justify-center items-center ">
             <div className=" text-3xl text-center mx-auto" >
-                <Typewriter
+                <div className='flex'><Typewriter
                     onInit={(typewriter) => {
                         typewriter.typeString('Neson')
                             .pauseFor(1000)
-                            .typeString('<br/>')                            
+                            .typeString('<br/>')
                             .typeString("I'm Professional Web Developer")
                             .pauseFor(1000)
-                            .changeDeleteSpeed(20)                           
+                            .changeDeleteSpeed(20)
                             .deleteChars(26)
                             .pauseFor(1000)
                             .typeString("Junior Web Developer")
-                            .start();
-                    }}
-                // options={{
-                //     autoStart: true,
-                //     loop: true,
-                // }}
-                />
-                <motion.div className="flex justify-between mx-auto mt-10"
-                    initial="hidden"
-                    animate="visible"
-                    variants={{
-                        hidden: {
-                            scale: 0.8,
-                            opacity: 0,
-                        },
-                        visible: {
-                            scale: 1,
-                            opacity: 1,
-                            transition: {
-                                delay: 15,
-                            },
-                        },
-                    }}
-                >
-                    <a
-                        className='px-12 py-3 text-sm font-medium rounded shadow bg-gray-50 active:bg-gray-500 active:text-slate-50 focus:outline-none focus:ring cursor-pointer hover:bg-gray-100'
-                    >
-                        Contact Me
-                    </a>
-                    <a
-                        className='px-12 py-3 text-sm font-medium rounded shadow bg-gray-50 active:bg-gray-500 active:text-slate-50 focus:outline-none focus:ring cursor-pointer hover:bg-gray-100'
-                    >
-                        My resume
-                    </a>
-                </motion.div>
+                            .callFunction(() => {
+                                setIsTyping(false)
+                            })
+                            .start()
 
+                    }}
+                        
+                />
+                </div>
+              <div >{!isTyping && asyncResult}</div>
+
+              {console.log(isTyping)}
             </div>
         </div>
-       
+
     );
 }
 

@@ -1,6 +1,7 @@
 import Typewriter from 'typewriter-effect';
 import { motion } from 'framer-motion';
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function Main_screen({ variant }) {
 
@@ -24,11 +25,11 @@ function Main_screen({ variant }) {
                     },
                 }}
             >
-                <a
+                <Link to = "/contact_me_page"
                     className='px-12 py-3 text-sm font-medium rounded shadow bg-gray-50 active:bg-gray-500 active:text-slate-50 focus:outline-none focus:ring cursor-pointer hover:bg-gray-100'
                 >
                     Contact Me
-                </a>
+                </Link>
                 <a
                     className='px-12 py-3 text-sm font-medium rounded shadow bg-gray-50 active:bg-gray-500 active:text-slate-50 focus:outline-none focus:ring cursor-pointer hover:bg-gray-100'
                 >
@@ -45,7 +46,7 @@ function Main_screen({ variant }) {
     }, []);
     return (
         <div className="h-4/5 flex justify-center items-center ">
-            <div className=" text-3xl text-center mx-auto" >
+            <div className=" text-3xl text-center mx-auto my-auto" >
                 <div className='flex'><Typewriter
                     onInit={(typewriter) => {
                         typewriter.typeString('Neson')

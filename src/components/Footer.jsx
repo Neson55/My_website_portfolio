@@ -3,14 +3,14 @@ import { FaTelegramPlane } from "react-icons/fa"
 
 function Footer () {
          return(
-            <div className=" h-1/10 flex justify-center ">
+            <div className=" h-1/10 flex justify-center flex-shrink-0">
                 
-                  <div className=' shadow-gray-400 p-3 cursor-pointer hover:scale-125'>
+                  <div className='flex shadow-gray-400 p-3 cursor-pointer hover:scale-125'>
                                             <a href='#' target='_blank' rel='noopener noreferrer'>
                                                 <BsGithub size='2rem' />
                                             </a>
                                         </div>
-                                        <div className='shadow-gray-400 p-3 cursor-pointer hover:scale-125'>
+                                        <div className='flex shadow-gray-400 p-3 cursor-pointer hover:scale-125'>
                                             <a
                                                 href='#'
                                                 target='_blank'
@@ -19,7 +19,7 @@ function Footer () {
                                                 <BsLinkedin size='2rem' />
                                             </a>
                                         </div>
-                                        <div className='shadow-gray-400 p-3 cursor-pointer hover:scale-125'>
+                                        <div className=' flex shadow-gray-400 p-3 cursor-pointer hover:scale-125'>
                                             <a
                                                 href='#'
                                                 target='_blank'

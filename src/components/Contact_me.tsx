@@ -35,21 +35,25 @@ const onSubmit: SubmitHandler<MyForm> = async (data) => {
 }
 
         return(
-            <div className="h-4/5 flex justify-center items-center bg-green-100 ">
+            <div className="h-4/5 flex justify-center items-center ">
                 <form   onSubmit={handleSubmit(onSubmit)}>
-                    <section className='gap-4 flex flex-col' >
-                    <input className='border-2 border-gray-700 rounded'
+                    <section className='gap-4 flex flex-col ' >
+                        <p className='text-l '>Name</p>
+                        <hr></hr>
+                    <input 
                     type="text"
                     aria-invalid={errors.name ? "true" : "false"}
                      {...register('name')}
                         placeholder="name"  
                         />
-                    {errors.name && <p role="alert">{errors.name.message}</p>}
-                    <input type="email" className='border-2 border-gray-700 rounded'
+                    {errors.name && <p className="text-red-600" role="alert">{errors.name.message}</p>}
+                    <p className='text-l '>Email</p>
+                        <hr></hr>
+                    <input type="email" className=' rounded'
                             aria-invalid={errors.email ? "true" : "false"}
                     {...register('email')}
                     placeholder='email' />
-                    {errors.email && <span role="alert">{errors.email.message}</span>}
+                    {errors.email && <span className="text-red-600"role="alert">{errors.email.message}</span>}
                     <button className='px-12 py-3 text-sm font-medium rounded shadow bg-gray-50 active:bg-gray-500 active:text-slate-50 focus:outline-none focus:ring cursor-pointer hover:bg-gray-100'>Send</button>
                     </section>
                </form>

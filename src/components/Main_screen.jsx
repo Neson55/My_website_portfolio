@@ -44,9 +44,19 @@ function Main_screen({ variant }) {
             
         });
     }, []);
+  
+      const stopTyping = () => {
+        if (currentTypewriter) {
+          const { typewriter, text } = currentTypewriter
+          const { cursor, wrapper } = typewriter.state.elements
+          cursor.setAttribute('hidden', 'hidden')
+          wrapper.innerHTML = text
+          typewriter.stop()
+        }
+      }
     return (
         <div className="h-4/5 flex justify-center items-center ">
-            <div className=" text-3xl text-center mx-auto my-auto" >
+            <div className=" text-3xl text-center mx-auto my-auto pb-10" >
                 <div className='flex'><Typewriter
                     onInit={(typewriter) => {
                         typewriter.typeString('Neson')
@@ -62,9 +72,8 @@ function Main_screen({ variant }) {
                                 setIsTyping(false)
                             })
                             .start()
-
+                    
                     }}
-                        
                 />
                 </div>
               <div >{!isTyping && asyncResult}</div>

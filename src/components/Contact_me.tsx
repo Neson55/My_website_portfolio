@@ -52,7 +52,7 @@ const onSubmit: SubmitHandler<MyForm> =  () => {
             <div className="h-4/5 flex justify-center items-center p-5 pb-20 ">
                 <div className="flex w-1/2 h-1/2  justify-center items-center">
                     <div className='pl-10'>
-                    <h1 className='text-3xl flex bo'>
+                    <h1 className='text-4xl flex bold'>
                     Do you have any questions ?
                     </h1>
                     <br/>

@@ -1,6 +1,6 @@
 import React from 'react'
 import { FaReact } from "react-icons/fa";
-import { SiMui } from "react-icons/si";
+import { SiFramer } from "react-icons/si";
 import { FaNode } from "react-icons/fa";
 import { SiTailwindcss } from "react-icons/si";
 import { FaBootstrap } from "react-icons/fa";
@@ -90,7 +90,7 @@ function Skils ({sizeIcon}) {
         delay: 4.25,
         ease: "easeIn"
       }} className='flex-col'>
-                <SiMui  size={sizeIcon}/>
+                <SiFramer  size={sizeIcon}/>
                 </motion.div>
                 <motion.div
       

@@ -11,14 +11,13 @@ export const Routing = () => {
    
     return (
         <BrowserRouter>
-            <Routes>
-            <Route path="*" element={<Error />} />
-                <Route path="/" element={<Home />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/projects" element={<Projects />} />
-                <Route path="/contact_me_page" element={<Contact_me_page />} />
-
-            </Routes>
-        </BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />}  />
+        <Route path="/about" element={<About />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/contact_me_page" element={<Contact_me_page />} />
+        <Route path="*" element={<Error />} />
+      </Routes>
+    </BrowserRouter>
     )
 }

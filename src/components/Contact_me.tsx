@@ -1,12 +1,13 @@
 import React, { useRef, useState } from "react";
 import { IoIosSend } from "react-icons/io";
+import { motion } from "framer-motion"; // Import motion from framer-motion
 import { SubmitHandler, useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import emailjs from "@emailjs/browser";
 
 const schema = z.object({
-  name: z.string().min(2),
+  name: z.string().min(2).refine(s => !s.includes(' '), 'No Spaces!'),
   email: z.string().email(),
   message: z.string(),
 });
@@ -15,6 +16,9 @@ type MyForm = z.infer<typeof schema>;
 
 function Contact_me() {
   const form = useRef<any>();
+  const [loading, setLoading] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+  const [submissionError, setSubmissionError] = useState(false);
 
   const {
     register,
@@ -25,9 +29,8 @@ function Contact_me() {
     resolver: zodResolver(schema),
   });
 
-  const [submitted, setSubmitted] = useState(false);
-
-  const onSubmit: SubmitHandler<MyForm> = () => {
+  const onSubmit: SubmitHandler<MyForm> = (data) => {
+    setLoading(true);
     emailjs
       .sendForm("service_rj7xzr9", "template_cugi17x", form.current, {
         publicKey: "ZXeiXnE-UtEFnmCVz",
@@ -36,17 +39,20 @@ function Contact_me() {
         () => {
           setSubmitted(true);
           reset();
-          console.log("SUCCESS!");
+          setLoading(false);
+          // Add any animation-related logic here
         },
         (error) => {
+          setSubmissionError(true);
+          setLoading(false);
           console.log("FAILED...", error.text);
         }
       );
   };
 
   return (
-    <div className="h-4/5 flex justify-center items-center p-5 pb-20 ">
-      <div className="flex w-1/2 h-1/2  justify-center items-center">
+    <div className="h-4/5 flex justify-center items-center p-5 pb-20">
+      <div className="flex w-1/2 h-1/2 justify-center items-center">
         <div className="pl-10">
           <h1 className="text-4xl flex bold">Do you have any questions ?</h1>
           <br />
@@ -76,7 +82,7 @@ function Contact_me() {
           </a>
         </div>
       </div>
-      <div className=" w-1/2 h-1/2 flex justify-center items-center  pr-28">
+      <div className=" w-1/2 h-1/2 flex justify-center items-center pr-28">
         <form ref={form} onSubmit={handleSubmit(onSubmit)}>
           <section className="gap-4 flex flex-col">
             <div className="flex gap-3 mt-10">
@@ -85,7 +91,7 @@ function Contact_me() {
                 <input
                   id="name"
                   type="text"
-                  className="p-1 pr-32 border border-gray-500 rounded "
+                  className="p-1 flex w-80 border border-gray-500 rounded"
                   aria-invalid={errors.name ? "true" : "false"}
                   {...register("name")}
                   placeholder="name"
@@ -96,12 +102,12 @@ function Contact_me() {
                   </p>
                 )}
               </div>
-              <div className="flex flex-col">
+              <div className="flex-col">
                 <p className="text-l ">Email:</p>
                 <input
                   id="email"
                   type="email"
-                  className="p-1 pr-32 border border-gray-500 rounded"
+                  className="flex w-80 p-1  border border-gray-500 rounded"
                   aria-invalid={errors.email ? "true" : "false"}
                   {...register("email")}
                   placeholder="email"
@@ -114,10 +120,10 @@ function Contact_me() {
               </div>
             </div>
             <div className="flex flex-col">
-              <p className="text-l">Message:</p>
-              <input
-                className=" p-1 pb-14 border border-gray-500 rounded"
-                type="text"
+              <p className="text-l ">Message:</p>
+              <textarea
+                className="w-full p-1 pb-14 border border-gray-500 rounded"
+                rows={3}
                 id="message"
                 aria-invalid={errors.message ? "true" : "false"}
                 {...register("message")}
@@ -129,20 +135,25 @@ function Contact_me() {
                 </p>
               )}
             </div>
-            {!submitted ? (
-              <div>
-                <button
-                  type="submit"
-                  className=" flex px-12 py-3 text-sm font-medium shadow bg-gray-50 active:bg-gray-500 active:text-slate-50  focus:ring cursor-pointer hover:bg-gray-100 rounded"
-                >
-                  Send <IoIosSend size="20px" />
-                </button>
-              </div>
-            ) : submitted ? (
-              <p className="text-green-600">Your message has been sent!</p>
-            ) : (
-              <p className="text-red-600">Something went wrong!</p>
-            )}
+            <div>
+              <motion.button
+                type="submit"
+                disabled={loading}
+                className="flex px-12 py-3 text-sm font-medium shadow bg-gray-50 active:bg-gray-500 active:text-slate-50  focus:ring cursor-pointer hover:bg-gray-100 rounded"
+                // Define animation properties
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                animate={{ opacity: loading ? 0.5 : 1 }} // Fade out button when loading
+              >
+                {loading ? "Sending..." : "Send"} <IoIosSend size="20px" />
+              </motion.button>
+              {submitted && (
+                <p className="text-green-600">Your message has been sent!</p>
+              )}
+              {submissionError && (
+                <p className="text-red-600">Something went wrong!</p>
+              )}
+            </div>
           </section>
         </form>
       </div>

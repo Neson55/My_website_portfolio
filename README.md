@@ -2,7 +2,7 @@
 
 <h1>Stack:</h1>
 
-<p><a href="https://simpleicons.org/icons/dotenv.svg"></a>-React Js</p>
+<p>-React Js<img src="./public/React.svg"/></p>
 <p>-Tailwind<p>
 <p>-TypeScript</p>
 <p>-React-router-dom</p>
@@ -11,7 +11,6 @@
 <p>-Zod</p>
 <p>-Vite</p>
 <p>-Emailjs</p>
-<p>-React-icons<p>
 <p>-Typewriter-effect</p>
 
 <h1>Feedback </h1>

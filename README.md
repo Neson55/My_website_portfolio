@@ -1,10 +1,8 @@
-import { FaReact } from "react-icons/fa";
-
 # Neson Portfolio
 
 <h1>Stack:</h1>
 
-<p>-React Js<FaReact /></p>
+<p>-React Js</p>
 <p>-Tailwind<p>
 <p>-TypeScript</p>
 <p>-React-router-dom</p>

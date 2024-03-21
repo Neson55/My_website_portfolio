@@ -2,7 +2,7 @@
 
 <h1>Stack:</h1>
 
-<p>-React Js #512BD4</p>
+<p><a href="https://simpleicons.org/icons/dotenv.svg"></a>-React Js</p>
 <p>-Tailwind<p>
 <p>-TypeScript</p>
 <p>-React-router-dom</p>

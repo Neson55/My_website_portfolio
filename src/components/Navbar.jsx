@@ -15,12 +15,12 @@ function Navbar() {
                 <Link to={"/"}><img height='45px' width='45px' src="src\assets\logo_N.jpg" alt="Logo"/></Link>
             </div>
             <div className='flex text-xl gap-4 mr-20'>
-            <div onClick={handleRefresh}>
+            
                 <Link to={"/"} className='hover:underline'>Home</Link>
-                </div>
-                <div onClick={handleRefresh}>     
-                <Link to={"/about"} className='hover:underline'>About</Link></div>
-                <div onClick={handleRefresh}><Link to={"/projects"} className='hover:underline'>Projects</Link></div>
+                
+                    
+                <Link to={"/about"} className='hover:underline'>About</Link>
+                <Link to={"/projects"} className='hover:underline'>Projects</Link>
             </div>
         </div>
     );

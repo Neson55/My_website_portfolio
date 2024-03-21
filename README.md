@@ -1,8 +1,10 @@
+import { FaReact } from "react-icons/fa";
+
 # Neson Portfolio
 
 <h1>Stack:</h1>
 
-<p>-React Js</p>
+<p>-React Js<FaReact /></p>
 <p>-Tailwind<p>
 <p>-TypeScript</p>
 <p>-React-router-dom</p>
@@ -14,5 +16,5 @@
 <p>-React-icons<p>
 <p>-Typewriter-effect</p>
 
-<h1>FeedBack </h1>
+<h1>Feedback </h1>
 <p>If you have any question. You may send me message in contact form on my site.</p>

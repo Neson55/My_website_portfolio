@@ -2,7 +2,7 @@
 
 <h2>Stack:</h2>
 <ul>
-<li>React Js<img src="./public/React.svg" width="20px" height="20px"hspace="100px"
+<li>React Js<img src="./public/React.svg" width="20px" height="20px"vspace="5px"
 /></li>
 <li>Tailwind</li>
 <li>TypeScript</li>

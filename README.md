@@ -1,6 +1,6 @@
 # Neson Portfolio
 
-<h1>Stack:<h1>
+<h1>Stack:</h1>
 
 <p>-Reac Js</p>
 <p>-Tailwind<p>

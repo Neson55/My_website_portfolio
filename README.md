@@ -2,7 +2,7 @@
 
 <h1>Stack:</h1>
 
-<p>-React Js</p>
+<p>-React Js #512BD4</p>
 <p>-Tailwind<p>
 <p>-TypeScript</p>
 <p>-React-router-dom</p>

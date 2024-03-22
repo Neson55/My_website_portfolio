@@ -27,7 +27,7 @@ function Main_screen({ variant }) {
             >
                 <Link
                     to="/contact_me_page"
-                    className='mr-10 px-12 py-3 text-sm font-medium rounded shadow bg-gray-50 active:bg-gray-500 active:text-slate-50 focus:outline-none focus:ring cursor-pointer hover:bg-gray-100'
+                    className='sm:mr-5 mr-10 px-12 py-3 text-sm font-medium rounded shadow bg-gray-50 active:bg-gray-500 active:text-slate-50 focus:outline-none focus:ring cursor-pointer hover:bg-gray-100'
                 >
                     Contact Me
                 </Link>

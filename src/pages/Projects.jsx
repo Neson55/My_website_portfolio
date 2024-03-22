@@ -9,7 +9,7 @@ function Projects () {
             <div className="h-screen flex-col ">
             <Navbar />
             <Projects_screen/>
-            <Footer />
+            <div className="sm:mt-52"><Footer/></div>
           </div>
         );
 }

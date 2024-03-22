@@ -18,6 +18,7 @@
     "react-hook-form": "^7.51.0",
     "react-icons": "^5.0.1",
     "react-router-dom": "^6.22.2",
+    "react-spinners": "^0.13.8",
     "tailwind-percentage-heights-plugin": "^0.1.4",
     "typewriter-effect": "^2.21.0",
     "zod": "^3.22.4"

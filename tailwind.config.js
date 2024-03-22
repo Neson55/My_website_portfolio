@@ -4,12 +4,9 @@ export default {
   "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {
-      height: {
-        '128': '32rem',
-        '300': '58.6rem'
-      }
-    },
+    screens: {
+      'sm': {'min': '240px', 'max': '767px'},}
+    
   },
   plugins: [    
     require('./node_modules/tailwind-percentage-heights-plugin')()

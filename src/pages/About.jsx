@@ -8,7 +8,7 @@ import Navbar from "../components/Navbar";
 function About () {
 
         return(
-            <div className="h-screen flex-col ">
+            <div className="h-screen flex-col">
             <Navbar />
             <About_screen />
             <Footer />

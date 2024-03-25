@@ -11,7 +11,7 @@ import { FaGithub } from "react-icons/fa";
 import { SiTypescript } from "react-icons/si";
 import { motion } from 'framer-motion';
 
-function Skils({ sizeIcon }) {
+function Skils({ sizeIcon, color }) {
 
   return (
     <div className='flex gap-10 justify-center sm:gap-28'>
@@ -24,7 +24,7 @@ function Skils({ sizeIcon }) {
           delay: 2.75,
           ease: "easeIn"
         }} className='flex-col'>
-        <FaReact size={sizeIcon} />
+        <FaReact size={sizeIcon} color={color} />
       </motion.div>
       <motion.div
 
@@ -35,7 +35,7 @@ function Skils({ sizeIcon }) {
           delay: 3,
           ease: "easeIn"
         }} className='flex-col'>
-        <SiTypescript size={sizeIcon} />
+        <SiTypescript size={sizeIcon} color={color} />
       </motion.div>
       <motion.div
 
@@ -46,7 +46,7 @@ function Skils({ sizeIcon }) {
           delay: 3.25,
           ease: "easeIn"
         }} className='flex-col'>
-        <FaHtml5 size={sizeIcon} />
+        <FaHtml5 size={sizeIcon} color={color}/>
       </motion.div>
       <motion.div
 
@@ -57,7 +57,7 @@ function Skils({ sizeIcon }) {
           delay: 3.5,
           ease: "easeIn"
         }} className='flex-col'>
-        <LiaCss3Alt size={sizeIcon} />
+        <LiaCss3Alt size={sizeIcon} color={color}/>
       </motion.div>
       <motion.div
 
@@ -68,7 +68,7 @@ function Skils({ sizeIcon }) {
           delay: 3.75,
           ease: "easeIn"
         }} className='flex-col'>
-        <SiTailwindcss size={sizeIcon} />
+        <SiTailwindcss size={sizeIcon} color={color} />
       </motion.div>
       </div>
       <div className='flex gap-10 sm:gap-3 sm:flex-col'>
@@ -81,7 +81,7 @@ function Skils({ sizeIcon }) {
           delay: 4,
           ease: "easeIn"
         }} className='flex-col'>
-        <FaNode size={sizeIcon} />
+        <FaNode size={sizeIcon} color={color} />
       </motion.div>
       <motion.div
 
@@ -92,7 +92,7 @@ function Skils({ sizeIcon }) {
           delay: 4.25,
           ease: "easeIn"
         }} className='flex-col'>
-        <SiFramer size={sizeIcon} />
+        <SiFramer size={sizeIcon} color={color} />
       </motion.div>
       <motion.div
 
@@ -103,7 +103,7 @@ function Skils({ sizeIcon }) {
           delay: 4.5,
           ease: "easeIn"
         }} className='flex-col'>
-        <FaBootstrap size={sizeIcon} />
+        <FaBootstrap size={sizeIcon} color={color} />
       </motion.div>
       <motion.div
 
@@ -114,7 +114,7 @@ function Skils({ sizeIcon }) {
           delay: 4.75,
           ease: "easeIn"
         }} className='flex-col'>
-        <SiAxios size={sizeIcon} />
+        <SiAxios size={sizeIcon} color={color}/>
       </motion.div>
       <motion.div
 
@@ -125,7 +125,7 @@ function Skils({ sizeIcon }) {
           delay: 5,
           ease: "easeIn"
         }} className='flex-col'>
-        <FaGithub size={sizeIcon} />
+        <FaGithub size={sizeIcon} color={color}/>
       </motion.div>
 </div>
     </div>

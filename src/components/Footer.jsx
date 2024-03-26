@@ -4,7 +4,7 @@ import { FaTelegramPlane } from "react-icons/fa"
 
 function Footer ({color}) {
          return(
-            <div className=" flex justify-center flex-shrink-0 dark:bg-slate-900">
+            <div className=" flex justify-center flex-shrink-0 dark:bg-gray-950">
                 
                   <div className='flex shadow-gray-400 p-3 cursor-pointer hover:scale-125'>
                                             <a href='#' target='_blank' rel='noopener noreferrer'>

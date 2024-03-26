@@ -53,7 +53,7 @@ function Contact_me() {
   return (
     <div className="h-4/5 flex justify-center items-center p-5 pb-20 sm:p-0 sm:flex-col sm:pb-0">
       <div className="flex w-5/6 h-1/2 justify-center items-center sm:h-60">
-        <div className="pl-10 sm:pl-0">
+        <div className="pl-10 sm:pl-0 dark:text-white">
           <h1 className="text-4xl flex bold sm:text-2xl">Do you have any questions ?</h1>
           <br />
           <p>
@@ -87,7 +87,7 @@ function Contact_me() {
           <section className="gap-4 flex flex-col">
             <div className="flex gap-3 mt-10">
               <div className="flex flex-col">
-                <p className="text-l sm:text-sm">Name:</p>
+                <p className="text-l sm:text-sm dark:text-white">Name:</p>
                 <input
                   id="name"
                   type="text"
@@ -103,7 +103,7 @@ function Contact_me() {
                 )}
               </div>
               <div className="flex-col">
-                <p className="text-l sm:text-sm">Email:</p>
+                <p className="text-l sm:text-sm dark:text-white">Email:</p>
                 <input
                   id="email"
                   type="email"
@@ -120,7 +120,7 @@ function Contact_me() {
               </div>
             </div>
             <div className="flex flex-col">
-              <p className="text-l sm:text-sm">Message:</p>
+              <p className="text-l sm:text-sm dark:text-white">Message:</p>
               <textarea
                 className="w-full p-1 pb-14 border border-gray-500 rounded"
                 rows={3}

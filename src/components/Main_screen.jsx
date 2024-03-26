@@ -59,9 +59,9 @@ function Main_screen({ variant }) {
     };
 
     return (
-        <div className="h-4/5 flex justify-center items-center ">
+        <div className="h-4/5 flex justify-center items-center  ">
             <div className="text-3xl text-center mx-auto my-auto pb-10">
-                <div className='flex-fixed'>
+                <div className='flex-fixed dark:text-white'>
                     <Typewriter
                         onInit={(typewriter) => {
                             typewriter.typeString('Neson')

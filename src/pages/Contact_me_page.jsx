@@ -6,7 +6,7 @@ import Contact_me from "../components/Contact_me";
 function Projects ({isDarkMode, toggleDarkMode}) {
 
         return(
-            <div className="h-screen flex-col  dark:bg-gray-950">
+            <div className="h-screen flex-col sm:h-full  dark:bg-gray-950">
             <Navbar isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
             <Contact_me/>
             <Footer color={isDarkMode?'white':''}/>

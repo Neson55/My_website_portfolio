@@ -65,7 +65,7 @@ function Contact_me() {
           <br />
           <a
             className="text-blue-600 hover:underline"
-            href="https://www.linkedin.com/"
+            href="https://www.linkedin.com/in/neson"
             target="_blank"
             rel="noopener noreferrer"
           >

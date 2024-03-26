@@ -14,7 +14,7 @@ function Navbar({isDarkMode, toggleDarkMode}) {
 
     return (
        
-        <div className='h-1/10 flex justify-between p-4 sm:h-1/10 sm:flex sm:justify-between dark:bg-gray-950'>
+        <div className='h-1/10 flex justify-between p-4 sm:h-1/10 sm:flex sm:justify-between '>
             <div className="size-fix ml-10 sm:ml-1" onClick={handleRefresh}>
                 <Link to={"/"}><img height='45px' width='45px' src={isDarkMode ?"src/assets/logoNDark.jpg": "src/assets/logo_N.svg"  }  alt="Logo"/></Link>
             </div>

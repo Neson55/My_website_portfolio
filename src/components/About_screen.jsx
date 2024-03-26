@@ -62,7 +62,7 @@ function About_screen({color}) {
           </motion.div>
         </div>
       </div>
-      <div className="flex h-1/2 justify-center ml-32 sm:flex-col sm:h-52 sm:ml-0 sm:mt-14   ">
+      <div className="flex h-1/2 justify-center ml-32 sm:flex-col sm:h-52 sm:ml-0 sm:mt-24 sm:mb-40  ">
         {window.innerWidth <= 700?<Skils sizeIcon={45} color={color}/>:window.innerWidth<=1400?<Skils sizeIcon={53} color={color}/>: <Skils sizeIcon={90} color={color}/>}
         {}
       </div>

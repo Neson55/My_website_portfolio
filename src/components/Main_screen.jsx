@@ -82,6 +82,7 @@ function Main_screen({ variant }) {
                 </div>
                 <div>{!isTyping && asyncResult}</div>
                 {console.log(isTyping)}
+                
             </div>
         </div>
     );

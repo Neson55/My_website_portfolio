@@ -5,6 +5,7 @@ import { SubmitHandler, useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import emailjs from "@emailjs/browser";
+import {emailjsKey} from "../key.js"
 
 const schema = z.object({
   name: z.string().min(2).refine(s => !s.includes(' '), 'No Spaces!'),
@@ -32,8 +33,8 @@ function Contact_me() {
   const onSubmit: SubmitHandler<MyForm> = (data) => {
     setLoading(true);
     emailjs
-      .sendForm("service_rj7xzr9", "template_cugi17x", form.current, {
-        publicKey: "ZXeiXnE-UtEFnmCVz",
+      .sendForm(emailjsKey.serviceID, emailjsKey.templateID, form.current, {
+        publicKey: emailjsKey.publicKey,
       })
       .then(
         () => {

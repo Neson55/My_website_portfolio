@@ -18,7 +18,7 @@ function Navbar({isDarkMode, toggleDarkMode}) {
        
         <div className='h-1/10 flex justify-between p-4 sm:h-1/10 sm:flex sm:justify-between '>
             <div className="size-fix ml-10 sm:ml-1" onClick={handleRefresh}>
-                <Link to={"/"}><img height='45px' width='45px' src={isDarkMode ?"src/assets/logoNDark.png": "src/assets/logo_N.svg"  }  alt="Logo"/></Link>
+                <Link to={"/"}><img height='45px' width='45px' src={isDarkMode ?"./logo/logoNDark.png": "./logo/logo_N.svg"  }  alt="Logo"/></Link>
             </div>
             <div className='flex text-xl gap-4 mr-20 sm:mr-2 sm:mt-1'>
                 <div onClick={handleRefresh}><Link to={"/"} className='hover:underline dark:text-white'>Home</Link></div>  

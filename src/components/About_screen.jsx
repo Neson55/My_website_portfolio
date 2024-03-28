@@ -9,7 +9,7 @@ function About_screen({color}) {
   return (
     <div className="h-4/5 flex-col sm:mb-0 ">
       <div className="flex h-1/2 justify-center  ">
-        <div className="flex w-2/3 justify-center items-center gap-10 sm:flex-row sm:w-full sm:gap-0">
+        <div className="flex w-2/3 justify-center items-center gap-10 sm:flex-row sm:w-full sm:gap-0 m:w-full m:gap-2">
           <motion.div
 
             initial={{ opacity: 0, scale: 0.5 }}
@@ -62,7 +62,7 @@ function About_screen({color}) {
           </motion.div>
         </div>
       </div>
-      <div className="flex h-1/2 justify-center ml-32 sm:flex-col sm:h-52 sm:ml-0 sm:mt-24 sm:mb-40  ">
+      <div className="flex h-1/2 justify-center ml-32 sm:flex-col sm:h-52 sm:ml-0 sm:mt-24 sm:mb-40  m:flex-col m:h-52 m:ml-0 m:mt-24 m:mb-40 ">
         {window.innerWidth <= 700?<Skils sizeIcon={45} color={color}/>:window.innerWidth<=1400?<Skils sizeIcon={53} color={color}/>: <Skils sizeIcon={90} color={color}/>}
         {}
       </div>

@@ -9,10 +9,13 @@ function Projects({ isDarkMode, toggleDarkMode }) {
 
   return (
 
-    <div className="h-screen flex-col dark:bg-gray-950 sm:h-full">
+    <div className="h-screen flex-col dark:bg-gray-950 sm:h-full tall:h-full m:h-full m:min-h-screen">
       <Navbar isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
       <Projects_screen />
-      <Footer color={isDarkMode ? 'white' : ''} />
+      
+        <Footer color={isDarkMode ? 'white' : ''} />
+    
+      
     </div>
 
   );

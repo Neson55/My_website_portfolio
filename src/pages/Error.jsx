@@ -7,7 +7,7 @@ function Error ({isDarkMode, toggleDarkMode}) {
        
         console.log('404 Page Not Found')
         return(<div>
-                        <div className="h-screen flex-col dark:bg-gray-950">
+                        <div className="h-screen flex-col dark:bg-gray-950 m:h-full m:min-h-screen">
                         <Navbar isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
                             <div className="h-7/10 flex flex-col items-center justify-center mb-24">
                             <p className="text-3xl font-medium dark:text-white">404 Page Not Found </p> 

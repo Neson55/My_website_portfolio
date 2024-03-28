@@ -14,8 +14,8 @@ import { motion } from 'framer-motion';
 function Skils({ sizeIcon, color }) {
 
   return (
-    <div className='flex gap-10 justify-center sm:gap-28'>
-      <div className='flex gap-10 sm:gap-3 sm:flex-col'><motion.div
+    <div className='flex gap-10 justify-center sm:gap-28 m:gap-28'>
+      <div className='flex gap-10 sm:gap-3 sm:flex-col m:gap-3 m:flex-col'><motion.div
 
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -71,7 +71,7 @@ function Skils({ sizeIcon, color }) {
         <SiTailwindcss size={sizeIcon} color={color} />
       </motion.div>
       </div>
-      <div className='flex gap-10 sm:gap-3 sm:flex-col'>
+      <div className='flex gap-10 sm:gap-3 sm:flex-col m:gap-3 m:flex-col'>
       <motion.div
 
         initial={{ opacity: 0, scale: 0 }}

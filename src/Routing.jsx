@@ -8,10 +8,10 @@ import Spiner from "./components/Spiner";
 import useDarkMode from "./hooks/useDarkMode";
 
 export const Routing = () => {
+  const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+  const [isDarkMode, toggleDarkMode] = useDarkMode(prefersDarkMode)
 
-  const [isDarkMode, toggleDarkMode] = useDarkMode(false)
-
-    return (<div className={isDarkMode ? 'dark' : 'white'}>
+    return (<div className={isDarkMode || !window.matchMedia('(prefers-color-scheme: dark)') ? 'dark' : 'white'}>
         <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode}/>} loader={<Spiner/>}  />

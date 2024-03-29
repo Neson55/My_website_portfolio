@@ -31,10 +31,10 @@ function Main_screen({ variant }) {
                 >
                     Contact Me
                 </Link>
-                <a
+                <a href='https://github.com/Neson55/My_website_portfolio' target='_blank' rel='noopener noreferrer'
                     className='px-12 py-3 text-sm font-medium rounded shadow bg-gray-50 active:bg-gray-500 active:text-slate-50 focus:outline-none focus:ring cursor-pointer hover:bg-gray-100'
                 >
-                    My resume
+                    This project
                 </a>
             </motion.div>
         );

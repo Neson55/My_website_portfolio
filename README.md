@@ -1,5 +1,5 @@
 # Neson Portfolio
-
+<img src="./public/portfolio-neson.ru_ (1).png" width="300px" height="300px"/>
 <h2>Stack:</h2>
 <ul>
 <li>React Js <img src="./public/React.svg" width="20px" height="20px"/></li>

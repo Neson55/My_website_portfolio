@@ -52,10 +52,10 @@ function Contact_me() {
   };
 
   return (
-    <div className="h-4/5 flex justify-center items-center p-5 pb-20 sm:p-0 sm:flex-col sm:pb-0 m:p-0 m:flex-col m:pb-0">
-      <div className="flex w-5/6 h-1/2 justify-center items-center sm:h-60 m:h-60">
-        <div className="pl-10 sm:pl-0 dark:text-white m:pl-0">
-          <h1 className="text-4xl flex bold sm:text-2xl m:text-3xl">Do you have any questions ?</h1>
+    <div className="h-4/5 flex justify-center items-center p-5 pb-20 sm:p-0 sm:flex-col sm:pb-0 m:p-0 m:flex-col m:pb-0 s:p-0 s:flex-col s:pb-0">
+      <div className="flex w-5/6 h-1/2 justify-center items-center sm:h-60  s:h-60 m:h-60">
+        <div className="pl-10 sm:pl-0 s:pl-0 dark:text-white m:pl-0">
+          <h1 className="text-4xl flex bold sm:text-2xl s:text-2xl m:text-3xl">Do you have any questions ?</h1>
           <br />
           <p>
             Write me your message. I answer your questions
@@ -83,16 +83,16 @@ function Contact_me() {
           </a>
         </div>
       </div>
-      <div className=" w-5/6 h-1/2 flex justify-center items-center pr-28 sm:pr-0 m:pl-12 ">
+      <div className=" w-5/6 h-1/2 flex justify-center items-center pr-28 sm:pr-0 s:pr-0 m:pl-12 ">
         <form ref={form} onSubmit={handleSubmit(onSubmit)}>
           <section className="gap-4 flex flex-col">
             <div className="flex gap-3 mt-10">
               <div className="flex flex-col">
-                <p className="text-l sm:text-sm dark:text-white m:text-sm">Name:</p>
+                <p className="text-l sm:text-sm s:text-sm dark:text-white m:text-sm">Name:</p>
                 <input
                   id="name"
                   type="text"
-                  className="p-1 flex w-80 border border-gray-500 rounded sm:w-40 m:w-40"
+                  className="p-1 flex w-80 border border-gray-500 rounded sm:w-40 s:w-32 m:w-40"
                   aria-invalid={errors.name ? "true" : "false"}
                   {...register("name")}
                   placeholder="name"
@@ -104,11 +104,11 @@ function Contact_me() {
                 )}
               </div>
               <div className="flex-col">
-                <p className="text-l sm:text-sm dark:text-white">Email:</p>
+                <p className="text-l sm:text-sm dark:text-white s:text-sm">Email:</p>
                 <input
                   id="email"
                   type="email"
-                  className="flex w-80 p-1  border border-gray-500 rounded sm:w-40 m:w-40"
+                  className="flex w-80 p-1  border border-gray-500 rounded sm:w-40 s:w-32 m:w-40"
                   aria-invalid={errors.email ? "true" : "false"}
                   {...register("email")}
                   placeholder="email"
@@ -121,7 +121,7 @@ function Contact_me() {
               </div>
             </div>
             <div className="flex flex-col">
-              <p className="text-l sm:text-sm dark:text-white">Message:</p>
+              <p className="text-l sm:text-sm s:text-sm dark:text-white">Message:</p>
               <textarea
                 className="w-full p-1 pb-14 border border-gray-500 rounded"
                 rows={3}

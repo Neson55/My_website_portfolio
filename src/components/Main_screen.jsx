@@ -11,7 +11,7 @@ function Main_screen({ variant }) {
         await new Promise(resolve => setTimeout(resolve));  
         return (
             <motion.div
-                className="flex-fixed justify-between mx-auto mt-10"
+                className="flex-fixed justify-between mx-auto mt-10 s:flex"
                 initial="hidden"
                 animate="visible"
                 variants={{
@@ -27,12 +27,12 @@ function Main_screen({ variant }) {
             >
                 <Link
                     to="/contact_me_page"
-                    className='sm:mr-5 mr-10 px-12 py-3 text-sm font-medium rounded shadow bg-gray-50 active:bg-gray-500 active:text-slate-50 focus:outline-none focus:ring cursor-pointer hover:bg-gray-100'
+                    className='sm:mr-5 mr-10 px-12 py-3 text-sm font-medium rounded shadow bg-gray-50 active:bg-gray-500 active:text-slate-50 focus:outline-none focus:ring cursor-pointer hover:bg-gray-100 s:mr-2'
                 >
                     Contact Me
                 </Link>
                 <a href='https://github.com/Neson55/My_website_portfolio' target='_blank' rel='noopener noreferrer'
-                    className='px-12 py-3 text-sm font-medium rounded shadow bg-gray-50 active:bg-gray-500 active:text-slate-50 focus:outline-none focus:ring cursor-pointer hover:bg-gray-100'
+                    className='px-12 py-3 text-sm font-medium rounded shadow bg-gray-50 active:bg-gray-500 active:text-slate-50  focus:outline-none focus:ring cursor-pointer hover:bg-gray-100'
                 >
                     This project
                 </a>
@@ -59,8 +59,8 @@ function Main_screen({ variant }) {
     };
 
     return (
-        <div className="h-4/5 flex justify-center items-center  ">
-            <div className="text-3xl text-center mx-auto my-auto pb-10">
+        <div className="h-4/5 flex justify-center items-center  m:mt-[200px] ">
+            <div className="text-3xl text-center mx-auto my-auto pb-10 s:text-2xl">
                 <div className='flex-fixed dark:text-white'>
                     <Typewriter
                         onInit={(typewriter) => {

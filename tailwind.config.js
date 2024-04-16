@@ -5,7 +5,8 @@ export default {
   ],
   theme: {
     screens: {
-      'sm': {'min': '240px', 'max': '500px'},
+      's': {'min': '0px', 'max': '374px'},
+      'sm': {'min': '375px', 'max': '500px'},
       'm': {'min': '501px', 'max': '1450px'},
       tall: { 'max': '760px'},
     }

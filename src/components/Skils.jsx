@@ -16,9 +16,9 @@ import { SiExpress } from "react-icons/si";
 function Skils({ sizeIcon, color }) {
 
   return (
-    <div className='flex gap-10 justify-center sm:gap-28 m:gap-28 s:gap-28'>
-      <div className='flex-auto gap-10 sm:gap-3 sm:flex-col s:gap-3 s:flex-col m:gap-3 m:flex-col'>
-
+    <div className='flex gap-10 justify-center  sm:flex-col sm:items-center sm:gap-6 s:flex-col s:items-center s:gap-6 m:flex-col m:items-center m:gap-6'>
+      <div className='flex gap-10 sm:flex sm:gap-6 s:flex s:gap-6 m:flex m:gap-6'>
+        <div className='sm:flex sm:gap-6 s:flex s:gap-6 m:flex m:gap-6'>
         <motion.div
 
           initial={{ opacity: 0, scale: 0 }}
@@ -42,7 +42,7 @@ function Skils({ sizeIcon, color }) {
           <SiTypescript size={sizeIcon} color={color} />
         </motion.div>
       </div>
-      <div className='flex-auto gap-10 sm:gap-3 sm:flex-col s:gap-3 s:flex-col m:gap-3 m:flex-col'>
+      <div className='flex-auto gap-10 sm:flex sm:gap-6 s:flex s:gap-6 m:flex m:gap-6 '>
         <motion.div
 
           initial={{ opacity: 0, scale: 0 }}
@@ -51,7 +51,7 @@ function Skils({ sizeIcon, color }) {
             duration: 1,
             delay: 3.25,
             ease: "easeIn"
-          }} className='flex-col'>
+          }} >
           <FaHtml5 size={sizeIcon} color={color} />
         </motion.div>
         <motion.div
@@ -61,12 +61,15 @@ function Skils({ sizeIcon, color }) {
           transition={{
             duration: 1,
             delay: 3.5,
-            ease: "easeIn"
-          }} >
+            ease: "easeIn",
+                    }}
+             >
           <LiaCss3Alt size={sizeIcon} color={color} />
         </motion.div>
+        </div>
       </div>
-      <div className='flex-auto gap-10 sm:gap-3 sm:flex-col s:gap-3 s:flex-col m:gap-3 m:flex-col'>
+      <div className='flex gap-10 sm:flex sm:gap-6 s:flex s:gap-6 m:flex m:gap-6'>
+        <div className='sm:flex sm:gap-6 s:flex s:gap-6 m:flex m:gap-6'>
         <motion.div
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -74,7 +77,8 @@ function Skils({ sizeIcon, color }) {
             duration: 1,
             delay: 3.75,
             ease: "easeIn"
-          }} >
+          }} 
+          >
           <SiTailwindcss size={sizeIcon} color={color} />
         </motion.div>
         <motion.div
@@ -89,7 +93,7 @@ function Skils({ sizeIcon, color }) {
           <FaNode size={sizeIcon} color={color} />
         </motion.div>
       </div>
-      <div className='flex-auto gap-10 sm:gap-3 sm:flex-col s:gap-3 s:flex-col m:gap-3 m:flex-col'>
+      <div className='flex-auto gap-10 sm:flex sm:gap-6 s:flex s:gap-6 m:flex m:gap-6'>
         <motion.div
 
           initial={{ opacity: 0, scale: 0 }}
@@ -113,7 +117,9 @@ function Skils({ sizeIcon, color }) {
           <FaBootstrap size={sizeIcon} color={color} />
         </motion.div>
       </div>
-      <div className='flex-auto gap-10 sm:gap-3 sm:flex-col s:gap-3 s:flex-col m:gap-3 m:flex-col'>
+      </div>
+      <div className='flex gap-10 sm:flex sm:gap-6 s:flex s:gap-6 m:flex m:gap-6'>
+        <div className='sm:flex sm:gap-6 s:flex s:gap-6 m:flex m:gap-6'>
         <motion.div
 
           initial={{ opacity: 0, scale: 0 }}
@@ -131,20 +137,20 @@ function Skils({ sizeIcon, color }) {
           animate={{ opacity: 1, scale: 1 }}
           transition={{
             duration: 1,
-            delay: 5,
+            delay: 5.25,
             ease: "easeIn"
           }} >
           <FaGithub size={sizeIcon} color={color} />
         </motion.div>
       </div>
-      <div className='flex-auto gap-10 sm:gap-3 sm:flex-col s:gap-3 s:flex-col m:gap-3 m:flex-col'>
+      <div className='flex-auto gap-10 sm:flex sm:gap-6 s:flex s:gap-6 m:flex m:gap-6 '>
         <motion.div
 
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{
             duration: 1,
-            delay: 5,
+            delay: 5.5,
             ease: "easeIn"
           }} >
           <FaDocker size={sizeIcon} color={color} />
@@ -155,20 +161,22 @@ function Skils({ sizeIcon, color }) {
           animate={{ opacity: 1, scale: 1 }}
           transition={{
             duration: 1,
-            delay: 5,
+            delay: 5.75,
             ease: "easeIn"
           }} >
           <SiExpress size={sizeIcon} color={color} />
         </motion.div>
       </div>
-      <div className='flex-auto gap-10 sm:gap-3 sm:flex-col s:gap-3 s:flex-col m:gap-3 m:flex-col'>
+        </div>
+      <div className='flex gap-10  sm:flex sm:gap-6 s:flex s:gap-6 m:flex m:gap-6'>
+          <div className='sm:flex sm:gap-6 s:flex s:gap-6 m:flex m:gap-6'>
         <motion.div
 
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{
             duration: 1,
-            delay: 5,
+            delay: 6,
             ease: "easeIn"
           }} >
           <SiPrisma size={sizeIcon} color={color} />
@@ -179,20 +187,20 @@ function Skils({ sizeIcon, color }) {
           animate={{ opacity: 1, scale: 1 }}
           transition={{
             duration: 1,
-            delay: 5,
+            delay: 6.25,
             ease: "easeIn"
           }} >
           <SiMongodb size={sizeIcon} color={color} />
         </motion.div>
       </div>
-      <div className='flex-auto gap-10 sm:gap-3 sm:flex-col s:gap-3 s:flex-col m:gap-3 m:flex-col'>
+      <div className='flex-auto gap-10  sm:flex sm:gap-6 s:flex s:gap-6 m:flex m:gap-6'>
         <motion.div
 
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{
             duration: 1,
-            delay: 5,
+            delay: 6.5,
             ease: "easeIn"
           }} >
           <SiNextui size={sizeIcon} color={color} />
@@ -203,11 +211,12 @@ function Skils({ sizeIcon, color }) {
           animate={{ opacity: 1, scale: 1 }}
           transition={{
             duration: 1,
-            delay: 5,
+            delay: 6.75,
             ease: "easeIn"
           }} >
           <SiRedux size={sizeIcon} color={color} />
         </motion.div>
+        </div>
       </div>
     </div>
 

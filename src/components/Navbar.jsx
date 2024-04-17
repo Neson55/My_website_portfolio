@@ -16,11 +16,11 @@ function Navbar({isDarkMode, toggleDarkMode}) {
 
     return (
        
-        <div className='h-1/10 flex justify-between p-4 sm:h-1/10 sm:flex sm:justify-between '>
-            <div className="size-fix ml-10 sm:ml-1 s:mr-9" onClick={handleRefresh}>
+        <div className='h-1/10 flex justify-between p-4 sm:h-1/10 sm:flex sm:justify-between s:flex-wrap'>
+            <div className="size-fix ml-10 sm:ml-1 s:w-[15px] s:h-[15px] s:flex-auto" onClick={handleRefresh}>
                 <Link to={"/"}><img height='45px' width='45px' src={isDarkMode ?"./logo/logoNDark.png": "./logo/logo_N.svg"  }  alt="Logo"/></Link>
             </div>
-            <div className='flex text-xl gap-4 mr-20 sm:mr-2 sm:mt-1 s:text-base'>
+            <div className='flex text-xl gap-4 mr-20 sm:mr-2 sm:mt-1 s:text-sm s:ml-24'>
                 <div onClick={handleRefresh}><Link to={"/"} className='hover:underline dark:text-white'>Home</Link></div>  
                 <div onClick={handleRefresh}><Link to={"/about"} className='hover:underline dark:text-white'>About</Link></div>
                 <div onClick={handleRefresh}><Link to={"/projects"} className='hover:underline dark:text-white'>Projects</Link></div>

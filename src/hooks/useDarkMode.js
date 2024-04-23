@@ -1,10 +1,21 @@
 import { useState } from "react";
 
-function useDarkMode(initialState = false) {
-  const [isDarkMode, setDarkMode] = useState(initialState);
+function useDarkMode() {
+  // Retrieve the theme preference from localStorage
+  const storedTheme = localStorage.getItem("theme");
+  
+  // Initialize the state based on the stored theme preference
+  const [isDarkMode, setDarkMode] = useState(storedTheme === "dark");
 
+  // Define a function to toggle the theme
   const toggleDarkMode = () => {
-    setDarkMode(prevState => !prevState);
+    // Toggle the state
+    setDarkMode(prevState => {
+      const newTheme = !prevState ? "dark" : "light";
+      // Store the new theme preference in localStorage
+      localStorage.setItem("theme", newTheme);
+      return !prevState;
+    });
   };
 
   return [isDarkMode, toggleDarkMode];

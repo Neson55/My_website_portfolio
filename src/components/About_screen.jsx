@@ -63,7 +63,7 @@ function About_screen({color}) {
         </div>
       </div>
       <div className="flex h-1/2 justify-center ml-32 sm:flex-col  sm:ml-0 sm:mt-10 sm:mb-10  m:flex-col m:h-52 m:ml-0 m:mt-24 m:mb-40 s:flex-col s:h-52 s:ml-0 s:mt-24 s:mb-40">
-        {window.innerWidth <= 700?<Skils sizeIcon={45} color={color}/>:window.innerWidth<=1400?<Skils sizeIcon={53} color={color}/>: <Skils sizeIcon={90} color={color}/>}
+        {window.innerWidth <= 700?<Skils sizeIcon={45} color={color}/>:window.innerWidth<=1400?<Skils sizeIcon={50} color={color}/>: <Skils sizeIcon={90} color={color}/>}
         {}
       </div>
     </div>

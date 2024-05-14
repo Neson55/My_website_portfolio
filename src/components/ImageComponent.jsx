@@ -16,14 +16,28 @@ import { Blurhash } from "react-blurhash";
     return (
         <>
         <div style={{display: imageLoaded?"none":"inline"}} >
-        <Blurhash
+        {window.innerWidth <= 700?<Blurhash
+        hash={hash}
+        width={282}
+        height={334}
+        resolutionX={32}
+        resolutionY={32}
+        punch={1}
+        />:window.innerWidth<=1400?<Blurhash
+        hash={hash}
+        width={323}
+        height={343}
+        resolutionX={32}
+        resolutionY={32}
+        punch={1}
+        />:<Blurhash
         hash={hash}
         width={364}
         height={352.88}
         resolutionX={32}
         resolutionY={32}
         punch={1}
-        />
+        />}
        </div>
        <img 
         src={src}
